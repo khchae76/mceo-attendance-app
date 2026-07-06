@@ -1,0 +1,5 @@
+{
+  "scripts": {"dev":"vite --host 0.0.0.0", "build":"vite build", "preview":"vite preview"},
+  "dependencies": {"@vitejs/plugin-react":"latest", "vite":"latest", "react":"latest", "react-dom":"latest", "@supabase/supabase-js":"latest", "html5-qrcode":"latest", "xlsx":"latest", "qrcode":"latest", "lucide-react":"latest", "jszip":"latest"},
+  "devDependencies": {}
+}
