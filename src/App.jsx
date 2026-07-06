@@ -199,7 +199,8 @@ function Stat({ label, value, icon }) { return <div className="stat">{icon}<span
 
 function Scanner({ onScan }) {
   useEffect(() => {
-    const scanner = new Html5QrcodeScanner('reader', { fps: 10, qrbox: { width: 260, height: 260 } }, false)
+   const boxSize = Math.min(380, Math.floor(window.innerWidth * 0.85))
+   const scanner = new Html5QrcodeScanner('reader', { fps: 10, qrbox: { width: boxSize, height: boxSize }, aspectRatio: 1 }, false)
     scanner.render(decoded => onScan(decoded), () => {})
     return () => { scanner.clear().catch(() => {}) }
   }, [])
